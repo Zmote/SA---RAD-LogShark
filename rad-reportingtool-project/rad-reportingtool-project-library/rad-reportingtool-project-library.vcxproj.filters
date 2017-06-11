@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Dateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Dateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Dateien">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Dateien">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Dateien\Model">
+      <UniqueIdentifier>{3f5c53ee-f27e-44c2-b4f5-b10367add6ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Model">
+      <UniqueIdentifier>{8541aaca-fa2a-45c2-acc1-d7960994d92f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generierte Dateien\Debug">
+      <UniqueIdentifier>{44bf9172-e16c-4380-ba6d-46db5b4524ad}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien\Release">
+      <UniqueIdentifier>{26263179-75c9-4923-8ac0-35e5eec64931}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Source Dateien\Common">
+      <UniqueIdentifier>{77008761-7751-4edf-8f0b-af4e0c5ec2d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Common">
+      <UniqueIdentifier>{ed8fac51-bc04-463a-8831-69e0fb183392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\REP">
+      <UniqueIdentifier>{8d56ae38-1ea7-47ef-996e-ce17ab506219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\REP">
+      <UniqueIdentifier>{7113475d-d96c-4b1d-81b7-7a93ea172338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Domain">
+      <UniqueIdentifier>{58dc987a-cc27-42c8-b186-ca4f16e8b12d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Domain">
+      <UniqueIdentifier>{30ccef47-08b3-4291-a2cd-4fd4cce3c0e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Worker">
+      <UniqueIdentifier>{9caa9c57-fad9-44b6-a628-046f2f10a512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Worker">
+      <UniqueIdentifier>{d80339e4-6a34-44ca-ba20-81b15f296794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Domain\Filter">
+      <UniqueIdentifier>{bb75e330-e627-496f-adff-10ecfd867dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\CustomWidgets">
+      <UniqueIdentifier>{20462a53-5284-4b67-af72-906429357c37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\CustomWidgets">
+      <UniqueIdentifier>{d17fa836-fcd6-4a99-9ad4-3f65f339c964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Domain\Filter">
+      <UniqueIdentifier>{1a653d2c-f0e1-4719-88ca-41003f8e0340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien\Windows">
+      <UniqueIdentifier>{105f9797-904d-46f9-b6ad-0772686867c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\Window">
+      <UniqueIdentifier>{b5456241-23b8-4b20-a542-6346a0bd9767}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Master.cpp">
+      <Filter>Source Dateien\REP</Filter>
+    </ClCompile>
+    <ClCompile Include="RApplication.cpp">
+      <Filter>Source Dateien\REP</Filter>
+    </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>Source Dateien\REP</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomQTabWidget.cpp">
+      <Filter>Source Dateien\CustomWidgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CustomQTabWidget.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CustomQTabWidget.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CustomWindowQTabWidget.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CustomWindowQTabWidget.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomWindowQTabWidget.cpp">
+      <Filter>Source Dateien\CustomWidgets</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_LogWindow_Modell.cpp">
+      <Filter>Source Dateien\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Main_Modell.cpp">
+      <Filter>Source Dateien\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_CaptureWorker.cpp">
+      <Filter>Source Dateien\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Client.cpp">
+      <Filter>Source Dateien\Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonLogUtils.cpp">
+      <Filter>Source Dateien\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonStringUtils.cpp">
+      <Filter>Source Dateien\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonViewUtils.cpp">
+      <Filter>Source Dateien\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomTableModel.cpp">
+      <Filter>Source Dateien\CustomWidgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CustomTableModel.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CustomTableModel.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RT_LogWindow.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RT_LogWindow.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_rt_main.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_rt_main.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_LogWindow.cpp">
+      <Filter>Source Dateien\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="rt_main.cpp">
+      <Filter>Source Dateien\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RT_CaptureWorker.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RT_CaptureWorker.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RT_UpdateWorker.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RT_UpdateWorker.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RT_ToFileWorker.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RT_ToFileWorker.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_LogFilter.cpp">
+      <Filter>Source Dateien\Domain\Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CustomFilterProxyModel.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CustomFilterProxyModel.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomFilterProxyModel.cpp">
+      <Filter>Source Dateien\CustomWidgets</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Settings.cpp">
+      <Filter>Source Dateien\Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RT_SettingsWindow.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RT_SettingsWindow.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_SettingsWindow.cpp">
+      <Filter>Source Dateien\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_ToFileWorker.cpp">
+      <Filter>Source Dateien\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonSettingsUtils.cpp">
+      <Filter>Source Dateien\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_UpdateWorker.cpp">
+      <Filter>Source Dateien\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_LogSettings.cpp">
+      <Filter>Source Dateien\Domain\Filter</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RT_Master.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RT_Master.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Master.cpp">
+      <Filter>Source Dateien\Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RApplication.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RApplication.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RT_Main_Modell.h">
+      <Filter>Header Dateien\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="ModPrefix.hpp">
+      <Filter>Header Dateien\REP</Filter>
+    </ClInclude>
+    <ClInclude Include="Session.hpp">
+      <Filter>Header Dateien\REP</Filter>
+    </ClInclude>
+    <ClInclude Include="Version.hpp">
+      <Filter>Header Dateien\REP</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_LogWindow_Modell.h">
+      <Filter>Header Dateien\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonStringUtils.h">
+      <Filter>Header Dateien\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonViewUtils.h">
+      <Filter>Header Dateien\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_RT_LogWindow.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_rt_main.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_Constants.h">
+      <Filter>Header Dateien\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_LogFilter.h">
+      <Filter>Header Dateien\Domain\Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_RT_SettingsWindow.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonSettingsUtils.h">
+      <Filter>Header Dateien\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_LogSettings.h">
+      <Filter>Header Dateien\Domain\Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_ViewSettings.h">
+      <Filter>Header Dateien\Domain\Filter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="RApplication.hpp">
+      <Filter>Header Dateien\REP</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_CaptureWorker.h">
+      <Filter>Header Dateien\Worker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CustomQTabWidget.h">
+      <Filter>Header Dateien\CustomWidgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CustomWindowQTabWidget.h">
+      <Filter>Header Dateien\CustomWidgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CommonLogUtils.h">
+      <Filter>Header Dateien\Common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CustomTableModel.h">
+      <Filter>Header Dateien\CustomWidgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_Client.h">
+      <Filter>Header Dateien\Domain</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_LogWindow.h">
+      <Filter>Header Dateien\Windows</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rt_main.h">
+      <Filter>Header Dateien\Windows</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_LogWindow.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rt_main.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_UpdateWorker.h">
+      <Filter>Header Dateien\Worker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_ToFileWorker.h">
+      <Filter>Header Dateien\Worker</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CustomFilterProxyModel.h">
+      <Filter>Header Dateien\CustomWidgets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_SettingsWindow.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_SettingsWindow.h">
+      <Filter>Header Dateien\Windows</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_Settings.h">
+      <Filter>Header Dateien\Domain</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RT_Master.h">
+      <Filter>Header Dateien\Domain</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Master.hpp">
+      <Filter>Header Dateien\REP</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

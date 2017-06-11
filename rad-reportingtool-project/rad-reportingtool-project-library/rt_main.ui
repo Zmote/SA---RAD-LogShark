@@ -1,0 +1,3469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RT_MainClass</class>
+ <widget class="QMainWindow" name="RT_MainClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1247</width>
+    <height>812</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RAD LogShark</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="rt_main.qrc">
+    <normaloff>:/RT_Main/Resources/rmlogo.png</normaloff>:/RT_Main/Resources/rmlogo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#clientSettingsWidget{
+background-color:white;
+border-color:grey;
+border-style:outset;
+border-width:1px;
+}
+
+QWidget#groupSettingsWidget{
+background-color:white;
+border-color:grey;
+border-style:outset;
+border-width:1px;
+}</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="mainSplitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QSplitter" name="splitter">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="handleWidth">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="layoutWidget2">
+        <layout class="QVBoxLayout" name="groupListLayout" stretch="1,1,10">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMaximumSize</enum>
+         </property>
+         <property name="bottomMargin">
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="groupSearchWidget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <layout class="QHBoxLayout" name="groupSearchInputLayout">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinAndMaxSize</enum>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Groups</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="groupSearchInput">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>1</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::StrongFocus</enum>
+              </property>
+              <property name="statusTip">
+               <string>Enter your group search here...</string>
+              </property>
+              <property name="whatsThis">
+               <string>Group search</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="placeholderText">
+               <string>Group Search Term...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="groupSettingsWidget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="mouseTracking">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <layout class="QVBoxLayout" name="groupSettingsLayout">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
+             <number>3</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="groupSettingsTopSection">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="sizeConstraint">
+               <enum>QLayout::SetMinAndMaxSize</enum>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QCheckBox" name="activeCheckBox">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Activates/Deactivates Group Logging</string>
+                </property>
+                <property name="text">
+                 <string>Active</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="groupStateComboBox">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Set Group State</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Live</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To File</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To Ring File</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To Shared File</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To Global</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="groupSettingsMidSection">
+              <item>
+               <widget class="QCheckBox" name="newestOnTopCheckBox">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Activates/Deactivates Newest on Top for Client Log View. Will reset the model.</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Newest On Top</string>
+                </property>
+                <property name="text">
+                 <string>Newest on Top</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="scrollToBottomCheckBox">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Activates Scroll To Bottom for Client Log View</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Scroll To Bottom</string>
+                </property>
+                <property name="text">
+                 <string>Scroll to Bottom</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="groupSettingsLowerSection">
+              <item>
+               <widget class="QRadioButton" name="tabModeRadio">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Shows Client in Tabbed Mode</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Tab Mode</string>
+                </property>
+                <property name="text">
+                 <string>Tab Mode</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="windowModeRadio">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Shows Client in Windowed Mode</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Window Mode</string>
+                </property>
+                <property name="text">
+                 <string>Window Mode</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTreeView" name="groupList">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>20</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::StrongFocus</enum>
+           </property>
+           <property name="statusTip">
+            <string>Available groups list</string>
+           </property>
+           <property name="whatsThis">
+            <string>Group List</string>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget1">
+        <layout class="QVBoxLayout" name="clientListLayout" stretch="1,1,10">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMaximumSize</enum>
+         </property>
+         <item>
+          <widget class="QWidget" name="clientSearchWidget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <layout class="QHBoxLayout" name="clientSearchInputLayout">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinAndMaxSize</enum>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="maximumSize">
+               <size>
+                <width>40</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Clients</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="clientInput">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>1</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::StrongFocus</enum>
+              </property>
+              <property name="statusTip">
+               <string>Enter your client search here...</string>
+              </property>
+              <property name="whatsThis">
+               <string>Client search</string>
+              </property>
+              <property name="placeholderText">
+               <string>Client Search Term...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="clientSettingsWidget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <layout class="QVBoxLayout" name="clientSettingsLayout">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
+             <number>3</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="clientSettingsTopSection" stretch="0,0">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="sizeConstraint">
+               <enum>QLayout::SetDefaultConstraint</enum>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QCheckBox" name="clientActiveCheckBox">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::ClickFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Activates/Deactives Client Logging</string>
+                </property>
+                <property name="text">
+                 <string>Active</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="clientsStateComboBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::ClickFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Sets Client state</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Live</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To File</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To Ring File</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To Shared File</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To Parent</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To Global</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>To MergeView</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="clientSettingsMidSection">
+              <item>
+               <widget class="QCheckBox" name="clientNewestOnTopCheckBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::ClickFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Activates/Deactivates Newest on Top for Client Log View. Will reset the model.</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Newest On Top</string>
+                </property>
+                <property name="text">
+                 <string>Newest on Top</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="clientScrollToBottomCheckBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::ClickFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Activates Scroll To Bottom for Client Log View</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Scroll To Bottom</string>
+                </property>
+                <property name="text">
+                 <string>Scroll to Bottom</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="clientSettingsLowerSection">
+              <item>
+               <widget class="QRadioButton" name="clientTabModeRadio">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::ClickFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Shows Client in Tabbed Mode</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Tab Mode</string>
+                </property>
+                <property name="text">
+                 <string>Tab Mode</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="clientWindowModeRadio">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::ClickFocus</enum>
+                </property>
+                <property name="statusTip">
+                 <string>Shows Client in Windowed Mode</string>
+                </property>
+                <property name="whatsThis">
+                 <string>Window Mode</string>
+                </property>
+                <property name="text">
+                 <string>Window Mode</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTreeView" name="clientList">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>20</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="statusTip">
+            <string>Available clients list</string>
+           </property>
+           <property name="whatsThis">
+            <string>Client list</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QSplitter" name="contentSplitter">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QWidget" name="filterWidget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="inputField">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>Filter keywords: Date, Time, Client, Group, Kind, Content, ex. Kind=^Info$, The filter accepts regex expressions</string>
+           </property>
+           <property name="statusTip">
+            <string>Filter keywords: Date, Time, Client, Group, Kind, Content, ex. Kind=^Info$, The filter accepts regex expressions</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="placeholderText">
+            <string>Filter expression here..</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="globalSearchCheckBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>90</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="statusTip">
+            <string>Enables Global Mode for Filtering</string>
+           </property>
+           <property name="text">
+            <string>Global Search</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="caseSensitiveCheckBox">
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Case Sensitive</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget">
+        <layout class="QGridLayout" name="mainContentLayout" rowstretch="0" columnstretch="0">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <property name="horizontalSpacing">
+          <number>0</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>3</number>
+         </property>
+        </layout>
+       </widget>
+       <widget class="QPlainTextEdit" name="logDetailInput">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>6</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="statusTip">
+         <string>Log details</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="placeholderText">
+         <string>Log Detail Output...</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="mainGroupLayoutWidgetSettings">
+       <layout class="QGridLayout" name="rightPaneGrid" rowstretch="0">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
+        </property>
+        <item row="0" column="0">
+         <widget class="QToolBox" name="toolBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="standardFiltersPage">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>150</width>
+             <height>697</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <attribute name="label">
+            <string>Global Log Settings</string>
+           </attribute>
+           <widget class="QGroupBox" name="messageStatesBox">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>150</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Message States</string>
+            </property>
+            <widget class="QCheckBox" name="enableInfoCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables Info Logs</string>
+             </property>
+             <property name="text">
+              <string>Enable Info</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="enableWarningCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>40</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables Warning Logs</string>
+             </property>
+             <property name="text">
+              <string>Enable Warning</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="enableErrorCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables Error Logs</string>
+             </property>
+             <property name="text">
+              <string>Enable Error</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="enableExceptionCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enalbes Exception Logs</string>
+             </property>
+             <property name="text">
+              <string>Enable Exception</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="enableFatalCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>100</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables Fatal Logs</string>
+             </property>
+             <property name="text">
+              <string>Enable Fatal</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="enableBinaryCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>120</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables Binary Logs</string>
+             </property>
+             <property name="text">
+              <string>Enable Binary</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="stampsBox">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>160</y>
+              <width>150</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Stamps</string>
+            </property>
+            <widget class="QCheckBox" name="useMessageHeaderCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>100</y>
+               <width>120</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Shows Kind Column</string>
+             </property>
+             <property name="text">
+              <string>Use Message Header</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="useTimeStampCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>40</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Shows Time Column</string>
+             </property>
+             <property name="text">
+              <string>Use Time Stamp</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="useDateStampCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Shows Date Column</string>
+             </property>
+             <property name="text">
+              <string>Use Date Stamp</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="useContentStampCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>120</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Shows Content Column</string>
+             </property>
+             <property name="text">
+              <string>Use Content Stamp</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="useGroupStampCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Shows Group Column</string>
+             </property>
+             <property name="text">
+              <string>Use Group Stamp</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="useClientStampCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Shows Client Column</string>
+             </property>
+             <property name="text">
+              <string>Use Client Stamp</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="bufferTriggersBox">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>320</y>
+              <width>150</width>
+              <height>131</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Buffer Triggers</string>
+            </property>
+            <widget class="QCheckBox" name="infoMessageCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables buffering for Info Logs</string>
+             </property>
+             <property name="text">
+              <string>Info Message</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="warningMessageCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>40</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables buffering for Warning Logs</string>
+             </property>
+             <property name="text">
+              <string>Warning Message</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="errorMessageCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables buffering for Error Logs</string>
+             </property>
+             <property name="text">
+              <string>Error Message</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="exceptionMessageCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables buffering for Exception Logs</string>
+             </property>
+             <property name="text">
+              <string>Exception Message</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="fatalMessageCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>100</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="statusTip">
+              <string>Enables buffering for Fatal Logs</string>
+             </property>
+             <property name="text">
+              <string>Fatal Message</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>460</y>
+              <width>150</width>
+              <height>231</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Application Output</string>
+            </property>
+            <widget class="QPlainTextEdit" name="applicationOutput">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>131</width>
+               <height>201</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:#f2f2f2</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>100</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>View Settings</string>
+           </attribute>
+           <widget class="QGroupBox" name="contentSectionBox">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>60</y>
+              <width>150</width>
+              <height>71</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Content Section</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <widget class="QCheckBox" name="showLogDetailCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>40</y>
+               <width>120</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Show Log Detail</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="showFilterAreaCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>101</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>120</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Show Filter Area</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QPushButton" name="assignColorButton">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>140</y>
+              <width>150</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Assign Color To Selected...</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="showGroupSectionCheckBox">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>120</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Show Group Section</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="showClientSectionCheckBox">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>120</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Show Client Section</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1247</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="importFileAction"/>
+    <addaction name="actionExport"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_Configuration"/>
+    <addaction name="separator"/>
+    <addaction name="closeAppAction"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuSystem">
+    <property name="title">
+     <string>System</string>
+    </property>
+    <addaction name="actionSettings"/>
+    <addaction name="actionRestore_Default_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionSelect_All_Groups"/>
+    <addaction name="actionSelect_All_Clients"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelect_All_active"/>
+    <addaction name="separator"/>
+    <addaction name="actionFreeze_All"/>
+    <addaction name="actionUnfreeze_All"/>
+    <addaction name="separator"/>
+    <addaction name="actionClear_Current_Table"/>
+    <addaction name="actionClear_All_Tables"/>
+    <addaction name="separator"/>
+    <addaction name="actionClear_All_MergeViews"/>
+    <addaction name="actionRestart_Master"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionShow_Inactive_Clients"/>
+    <addaction name="separator"/>
+    <addaction name="actionShow_Binary_Clients"/>
+    <addaction name="actionShow_Text_Clients"/>
+    <addaction name="separator"/>
+    <addaction name="actionArrange_Windows"/>
+    <addaction name="separator"/>
+    <addaction name="actionReset_Selected_Clients"/>
+    <addaction name="actionReset_All_Clients"/>
+    <addaction name="separator"/>
+    <addaction name="actionAssign_Color"/>
+    <addaction name="separator"/>
+    <addaction name="actionMinimize_All"/>
+    <addaction name="actionMaximize_All"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose_All_Tabs"/>
+    <addaction name="actionClose_All_Windows"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuSystem"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#statusBar{
+border-top:2px solid #E8E7E7
+}</string>
+   </property>
+  </widget>
+  <action name="closeAppAction">
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="importFileAction">
+   <property name="text">
+    <string>Import</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F1</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionShow_Inactive_Clients">
+   <property name="text">
+    <string>Show Inactive Clients</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionShow_Binary_Clients">
+   <property name="text">
+    <string>Show Binary Clients</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionShow_Text_Clients">
+   <property name="text">
+    <string>Show Text Clients</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionArrange_Windows">
+   <property name="text">
+    <string>Arrange Windows</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionSelect_All_Groups">
+   <property name="text">
+    <string>Select All Groups</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="actionSelect_All_Clients">
+   <property name="text">
+    <string>Select All Clients</string>
+   </property>
+   <property name="shortcut">
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="actionSelect_All_active">
+   <property name="text">
+    <string>Select All (active)</string>
+   </property>
+   <property name="shortcut">
+    <string>F4</string>
+   </property>
+  </action>
+  <action name="actionReset_Selected_Clients">
+   <property name="text">
+    <string>Reset Selected Clients</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionReset_All_Clients">
+   <property name="text">
+    <string>Reset All Clients</string>
+   </property>
+   <property name="shortcut">
+    <string>F6</string>
+   </property>
+  </action>
+  <action name="actionAssign_Color">
+   <property name="text">
+    <string>Assign Color To Selected...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionFreeze_All">
+   <property name="text">
+    <string>Freeze All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionUnfreeze_All">
+   <property name="text">
+    <string>Unfreeze All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionMinimize_All">
+   <property name="text">
+    <string>Minimize All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionMaximize_All">
+   <property name="text">
+    <string>Maximize All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionClear_Current_Table">
+   <property name="text">
+    <string>Clear Current Table</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionClear_All_Tables">
+   <property name="text">
+    <string>Clear All Tables</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionClose_All_Tabs">
+   <property name="text">
+    <string>Close All Tabs</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+W</string>
+   </property>
+  </action>
+  <action name="actionLoad_Configuration">
+   <property name="text">
+    <string>Load Configuration...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionClose_All_Windows">
+   <property name="text">
+    <string>Close All Windows</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionClear_All_MergeViews">
+   <property name="text">
+    <string>Clear All MergeViews</string>
+   </property>
+   <property name="shortcut">
+    <string>F7</string>
+   </property>
+  </action>
+  <action name="actionRestore_Default_Settings">
+   <property name="text">
+    <string>Restore Default Settings</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
+   </property>
+  </action>
+  <action name="actionRestart_Master">
+   <property name="text">
+    <string>Restart Master</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F5</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rt_main.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>closeAppAction</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>closeAppTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>508</x>
+     <y>296</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>importFileAction</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>importFileTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>508</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableInfoCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>enableInfoCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1132</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableWarningCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>enableWarningCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1097</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableErrorCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>enableErrorCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1132</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableExceptionCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>enableExceptionCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1094</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableFatalCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>enableFatalCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1153</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableBinaryCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>enableBinaryCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1135</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useMessageHeaderCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>useMessageHeaderCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>333</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1121</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useTimeStampCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>useTimeStampCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1148</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useDateStampCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>useDateStampCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1079</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>infoMessageCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>infoMessageCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1123</x>
+     <y>781</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>warningMessageCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>warningMessageCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1154</x>
+     <y>781</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>errorMessageCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>errorMessageCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>454</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1082</x>
+     <y>781</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exceptionMessageCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>exceptionMessageCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1109</x>
+     <y>781</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fatalMessageCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>fatalMessageCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>494</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1140</x>
+     <y>781</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExport</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>exportFileTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSelect_All_Clients</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>selectAllClients()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSelect_All_Groups</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>selectAllGroups()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSelect_All_active</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>selectAllActive()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useGroupStampCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>useGroupStampCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>294</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1107</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useClientStampCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>useClientStampCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1155</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useContentStampCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>useContentStampCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>881</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAssign_Color</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>assignColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAbout</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>aboutTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHelp</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>helpTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSettings</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>settingsTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShow_Inactive_Clients</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>showInactiveClientsTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShow_Binary_Clients</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>showBinaryClientsTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShow_Text_Clients</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>showTextClientsTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionArrange_Windows</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>arrangeWindowsTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReset_All_Clients</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>resetAllClientsTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReset_Selected_Clients</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>resetSelectedClientsTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClose_All_Tabs</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>closeAllTabsTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMinimize_All</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>minimizeAllTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMaximize_All</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>maximizeAllTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear_Current_Table</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clearCurrentTableTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear_All_Tables</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clearAllTablesTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFreeze_All</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>freezeAllTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionUnfreeze_All</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>unfreezeAllTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoad_Configuration</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>loadConfigTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClose_All_Windows</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>closeAllWindows()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showLogDetailCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>showLogDetailCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1004</x>
+     <y>831</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>assignColorButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>assignColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1190</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1113</x>
+     <y>855</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clientActiveCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clientActiveCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>455</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>816</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clientsStateComboBox</sender>
+   <signal>activated(int)</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clientsStateComboBoxChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>455</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>815</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clientNewestOnTopCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clientNewestOnTopCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>476</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>78</x>
+     <y>824</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clientScrollToBottomCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clientScrollToBottomCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>476</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>835</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clientTabModeRadio</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clientTabModeRadioClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>497</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>23</x>
+     <y>847</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clientWindowModeRadio</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clientWindowModeRadioClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>497</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>117</x>
+     <y>863</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clientInput</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clientListSearchTextChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>155</x>
+     <y>843</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>activeCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>activeCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>53</x>
+     <y>-12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>groupStateComboBox</sender>
+   <signal>activated(int)</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>groupStateComboBoxChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>-13</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>newestOnTopCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>newestOnTopCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>78</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>scrollToBottomCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>scrollToBottomCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>-6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tabModeRadio</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>tabModeRadioClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>33</x>
+     <y>-12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>windowModeRadio</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>windowModeRadioClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>-13</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>groupSearchInput</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>groupListSearchTextChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>435</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>-3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear_All_MergeViews</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>clearAllMergeViews()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>623</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showFilterAreaCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>showFilterArea()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1107</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1117</x>
+     <y>817</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showClientSectionCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>showClientSection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1095</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1097</x>
+     <y>-12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showGroupSectionCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>showGroupSection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1115</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1033</x>
+     <y>-11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inputField</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>globalSearchTermChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>542</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>724</x>
+     <y>-12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inputField</sender>
+   <signal>returnPressed()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>executeFilterClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>677</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>904</x>
+     <y>-9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRestore_Default_Settings</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>restoreDefaultSettings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>623</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRestart_Master</sender>
+   <signal>triggered()</signal>
+   <receiver>RT_MainClass</receiver>
+   <slot>restartMasterTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>623</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>executeFilterClicked()</slot>
+  <slot>openFileTriggered()</slot>
+  <slot>closeAppTriggered()</slot>
+  <slot>importFileTriggered()</slot>
+  <slot>startCaptureClicked()</slot>
+  <slot>stopCaptureClicked()</slot>
+  <slot>toFileCheckBoxClicked()</slot>
+  <slot>toLiveCheckBoxClicked()</slot>
+  <slot>newestOnTopCheckBoxClicked()</slot>
+  <slot>groupListItemClicked()</slot>
+  <slot>clientListItemClicked()</slot>
+  <slot>enableInfoCheckBoxClicked()</slot>
+  <slot>enableWarningCheckBoxClicked()</slot>
+  <slot>enableErrorCheckBoxClicked()</slot>
+  <slot>enableExceptionCheckBoxClicked()</slot>
+  <slot>enableFatalCheckBoxClicked()</slot>
+  <slot>enableBinaryCheckBoxClicked()</slot>
+  <slot>useMessageHeaderCheckBoxClicked()</slot>
+  <slot>useTimeStampCheckBoxClicked()</slot>
+  <slot>useDateStampCheckBoxClicked()</slot>
+  <slot>infoMessageCheckBoxClicked()</slot>
+  <slot>warningMessageCheckBoxClicked()</slot>
+  <slot>errorMessageCheckBoxClicked()</slot>
+  <slot>exceptionMessageCheckBoxClicked()</slot>
+  <slot>fatalMessageCheckBoxClicked()</slot>
+  <slot>clientListSearchTextChanged(QString)</slot>
+  <slot>groupListSearchTextChanged(QString)</slot>
+  <slot>refreshListsClicked()</slot>
+  <slot>activeCheckBoxClicked()</slot>
+  <slot>toParentCheckBoxClicked()</slot>
+  <slot>tabModeRadioClicked()</slot>
+  <slot>windowModeRadioClicked()</slot>
+  <slot>toRingFileCheckBoxClicked()</slot>
+  <slot>scrollToBottomCheckBoxClicked()</slot>
+  <slot>selectAllGroups()</slot>
+  <slot>selectAllClients()</slot>
+  <slot>selectAllActive()</slot>
+  <slot>handleClientListPressed(QModelIndex)</slot>
+  <slot>handleGroupListPressed(QModelIndex)</slot>
+  <slot>useEntryStampCheckBoxClicked()</slot>
+  <slot>useClientStampCheckBoxClicked()</slot>
+  <slot>useGroupStampCheckBoxClicked()</slot>
+  <slot>useContentStampCheckBoxClicked()</slot>
+  <slot>assignColor()</slot>
+  <slot>toGlobalCheckBoxClicked()</slot>
+  <slot>toSharedFileCheckBoxClicked()</slot>
+  <slot>loadConfigTriggered()</slot>
+  <slot>closeAllTabsTriggered()</slot>
+  <slot>showTextClientsTriggered()</slot>
+  <slot>showBinaryClientsTriggered()</slot>
+  <slot>arrangeWindowsTriggered()</slot>
+  <slot>resetAllClientsTriggered()</slot>
+  <slot>resetSelectedClientsTriggered()</slot>
+  <slot>showInactiveClientsTriggered()</slot>
+  <slot>helpTriggered()</slot>
+  <slot>aboutTriggered()</slot>
+  <slot>settingsTriggered()</slot>
+  <slot>clearAllTablesTriggered()</slot>
+  <slot>clearCurrentTableTriggered()</slot>
+  <slot>minimizeAllTriggered()</slot>
+  <slot>maximizeAllTriggered()</slot>
+  <slot>freezeAllTriggered()</slot>
+  <slot>unfreezeAllTriggered()</slot>
+  <slot>globalSearchTermChanged(QString)</slot>
+  <slot>exportFileTriggered()</slot>
+  <slot>closeAllWindows()</slot>
+  <slot>selectSelectedClientParents()</slot>
+  <slot>clientActiveCheckBoxClicked()</slot>
+  <slot>clientsStateComboBoxChanged(int)</slot>
+  <slot>clientNewestOnTopCheckBoxClicked()</slot>
+  <slot>clientScrollToBottomCheckBoxClicked()</slot>
+  <slot>clientTabModeRadioClicked()</slot>
+  <slot>clientWindowModeRadioClicked()</slot>
+  <slot>groupStateComboBoxChanged(int)</slot>
+  <slot>showLogDetailCheckBoxClicked()</slot>
+  <slot>clientMergeViewCheckBoxClicked()</slot>
+  <slot>clearAllMergeViews()</slot>
+  <slot>showGroupSection()</slot>
+  <slot>showClientSection()</slot>
+  <slot>showFilterArea()</slot>
+  <slot>restoreDefaultSettings()</slot>
+  <slot>restartMasterTriggered()</slot>
+ </slots>
+</ui>

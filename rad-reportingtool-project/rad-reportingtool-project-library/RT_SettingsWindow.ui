@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>544</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>560</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="configurationLabel">
+       <property name="text">
+        <string>Configuration:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="configurationNameLabel">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="baseSaveLocationLabel">
+       <property name="text">
+        <string>Base Save Location:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="baseSaveLocationVerticalLayout">
+       <item>
+        <widget class="QLineEdit" name="baseSaveLocationInput"/>
+       </item>
+       <item>
+        <widget class="QToolButton" name="baseSaveLocationBrowserButton">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="toFileSaveLocationLabel">
+       <property name="text">
+        <string>To File Save Location:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="toFileSaveLocationVerticalLayout">
+       <item>
+        <widget class="QLineEdit" name="toFileSaveLocationInput"/>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toFileSaveLocationBrowserButton">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="toSharedSaveLocationLabel">
+       <property name="text">
+        <string>To Shared Save Location: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <layout class="QHBoxLayout" name="toSharedFileSaveLocationVerticalLayout">
+       <item>
+        <widget class="QLineEdit" name="toSharedSaveLocationInput"/>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toSharedSaveLocationBrowserButton">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="toRingFileSaveLocationLabel">
+       <property name="text">
+        <string>To Ring File Save Location: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <layout class="QHBoxLayout" name="toRingFileSavelocationVerticalLayout">
+       <item>
+        <widget class="QLineEdit" name="toRingFileSaveLocationInput"/>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toRingFileSaveLocationBrowserButton">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="6" column="0">
+      <widget class="Line" name="locationDivider">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="tableLogBufferLimitLabel">
+       <property name="text">
+        <string>Table Log Buffer Limit: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="logBufferLimitInput">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="ringBufferLimitLabel">
+       <property name="text">
+        <string>Ring Buffer Limit:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="ringBufferLimitInput">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="messageBufferLimitLabel">
+       <property name="text">
+        <string>Message Buffer Limit:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="messageBufferLimitInput">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="0">
+      <widget class="QLabel" name="allowAutoRegistrationLabel">
+       <property name="text">
+        <string>Allow Auto Reigstration:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="1">
+      <widget class="QCheckBox" name="allowAutoRegistrationCheckBox">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0">
+      <widget class="QFrame" name="frame">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>5</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="0" colspan="2">
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>Persistency</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="0">
+      <widget class="QLabel" name="persistInfoEmptyLabel">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="1">
+      <widget class="QLabel" name="persistSettingsInfoLabel">
+       <property name="text">
+        <string>Checking this will persist your settings in an external file.
+You can choose what to persist below.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="0">
+      <widget class="QLabel" name="persistSettingsLabel">
+       <property name="text">
+        <string>Persist Settings:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="1">
+      <widget class="QCheckBox" name="persistSettingsCheckBox">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="1">
+      <widget class="QGroupBox" name="clientSettingsBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="title">
+        <string>Client Settings</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <widget class="QRadioButton" name="onlyActiveClientsRadio">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>20</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Only Active Clients</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="onlySelectedClientsRadio">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>20</y>
+          <width>131</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Only Selected Clients</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="allClientsRadio">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>20</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>All Clients</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="noClientsRadio">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>20</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>No Clients</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="18" column="1">
+      <widget class="QGroupBox" name="groupSettingsBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Group Settings</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <widget class="QRadioButton" name="allGroupsRadio">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>20</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>All Groups</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="onlySelectedGroupsRadio">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>20</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Only Selected Groups</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="onlyActiveGroupsRadio">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>20</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Only Active Groups</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="noGroupsRadio">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>20</y>
+          <width>82</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>No Groups</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="21" column="0">
+      <widget class="QLabel" name="persistFileNameLabel">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Persistent Filename</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="1">
+      <layout class="QHBoxLayout" name="persistFileVerticalLayout">
+       <item>
+        <widget class="QLineEdit" name="persistFileNameInput">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="19" column="0">
+      <widget class="QLabel" name="globalLogSettingsLabel">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Global Log Settings</string>
+       </property>
+      </widget>
+     </item>
+     <item row="19" column="1">
+      <widget class="QCheckBox" name="globalLogSettingsCheckBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="0">
+      <widget class="QLabel" name="viewSettingsLabel">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>View Settings</string>
+       </property>
+      </widget>
+     </item>
+     <item row="20" column="1">
+      <widget class="QCheckBox" name="viewSettingsCheckBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Master Host:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="masterHostInput">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Master Port:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="masterPortInput">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>saveButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>saveTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>515</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>525</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>cancelTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>499</x>
+     <y>515</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>509</x>
+     <y>525</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>baseSaveLocationBrowserButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>baseSaveLocationBrowserButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>536</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toFileSaveLocationBrowserButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>toFileSaveLocationBrowserButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toSharedSaveLocationBrowserButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>toSharedSaveLocationBrowserButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>542</x>
+     <y>88</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toRingFileSaveLocationBrowserButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>toRingFileSaveLocationBrowserButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>372</x>
+     <y>4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>persistSettingsCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>persistSettingsCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>allowAutoRegistrationCheckBox</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>allowAutoRegistrationCheckBoxClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>564</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>saveTriggered()</slot>
+  <slot>cancelTriggered()</slot>
+  <slot>baseSaveLocationBrowserButtonClicked()</slot>
+  <slot>toFileSaveLocationBrowserButtonClicked()</slot>
+  <slot>toSharedSaveLocationBrowserButtonClicked()</slot>
+  <slot>toRingFileSaveLocationBrowserButtonClicked()</slot>
+  <slot>persistFileNameBrowserButtonClicked()</slot>
+  <slot>persistSettingsCheckBoxClicked()</slot>
+  <slot>allowAutoRegistrationCheckBoxClicked()</slot>
+ </slots>
+</ui>
